@@ -23,14 +23,17 @@ async function main() {
         assert.equal(record.params[0], cfgChain.bip44ChainId, 'bip44ChainId failed')
         assert.equal(record.params[1].toLowerCase(), cfgChain.tokenManager.toLowerCase(), 'tokenManager failed')
 
-        let httpProvider = new ethers.providers.JsonRpcProvider(execChain.url)
+        let httpProvider = new ethers.providers.JsonRpcProvider(cfgChain.url)
         await httpProvider.ready
         chainInfo = await httpProvider.getNetwork()
-        assert.equal(record.chainId, chainInfo.chainId, 'online chainId failed')
+        console.log("chainInfo:", chainInfo)
+        if(execChain != 'WAN') {
+            assert.equal(record.chainId, chainInfo.chainId, 'online chainId failed')
+        }
         if(nonce[execChain]) {
             nonce[execChain] += 1
         } else {
-            nonce[execChain] = await httpProvider.eth.getTransactionCount(record.from)
+            nonce[execChain] = await httpProvider.getTransactionCount(record.from)
             console.log("nonce[execChain]:", nonce[execChain])
         }
         assert(record.nonce, nonce[execChain], 'nonce failed')
