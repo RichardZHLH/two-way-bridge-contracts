@@ -20,7 +20,7 @@ const networks = {
     }
   },
   ETH_mainnet:{
-    url:"https://nodes.wandevs.org/eth",
+    url:"https://eth-mainnet.g.alchemy.com/v2/5eYUB5F1KeJes9KG3-CiTNBYoQvNmtG6",
     chainId :1,
     tokenManager:'0xbab93311de250b5b422c705129b3617b3cb6e9e1',
     groupApprove:'0xa1223a59a55eaad135bce9f513181c388072cc71',
@@ -55,7 +55,7 @@ const networks = {
   },
   MATICETH_mainnet:{
     url:"https://zkevm-rpc.com",
-    chainId :0,
+    chainId :1101,
     tokenManager:'0x2eA7211507851074bC640dF83058c9B3c9B5DF55',
     groupApprove:'0xD825d018eE04092997F090adac8DcecA59B13c80',
     bip44ChainId:1073741838,
@@ -72,7 +72,7 @@ const networks = {
   },
   LINEA_mainnet:{
     url: "https://1rpc.io/linea",
-    chainId :0,
+    chainId :8453,
     tokenManager:'0x97E0883493e8bB7A119A1E36E53ee9E7A2D3CA7b',
     groupApprove:'0x3cc97934F6770b649ef27682c6b9369b073c1058',
     bip44ChainId:1073741842,
@@ -89,7 +89,7 @@ const networks = {
   },
   MATIC_mainnet:{
     url: "https://polygon-rpc.com/",
-    chainId :0,
+    chainId :137,
     tokenManager:'0xc928c8e48647c8b0ce550c2352087b1cf5c6111e',
     groupApprove:'0x329f162550e3d5d9898a0aae05e21bfcd5f1cf83',
     bip44ChainId:2147484614,
@@ -106,7 +106,7 @@ const networks = {
   },
   ZKETH_mainnet:{
     url: "https://zksync-era.blockpi.network/v1/rpc/public",
-    chainId :0,
+    chainId :324,
     tokenManager:'0x6a1b7d7d4b9b9f3e9ce585db35bf68038267aef2',
     groupApprove:'0x58b18FDE33F8FEd285c9c538a894Ca2d1a21DF81',
     bip44ChainId:1073741837,
@@ -123,7 +123,7 @@ const networks = {
   },
   ARB_mainnet:{
     url: "https://arb1.arbitrum.io/rpc",
-    chainId :0,
+    chainId :42161,
     tokenManager:'0xc928c8e48647c8b0ce550c2352087b1cf5c6111e',
     groupApprove:'0x8d42d317b2bd6b60183461ed41bd00f17c3f3fe8',
     bip44ChainId:1073741826,
@@ -140,7 +140,7 @@ const networks = {
   },
   BSC_mainnet:{
     url: "https://bsc.blockpi.network/v1/rpc/public",
-    chainId :0,
+    chainId :56,
     tokenManager:'0x39af91cba3aed00e9b356ecc3675c7ef309017dd',
     groupApprove:'0x5a809f774a2f9fb2587aeca7e380e3d67522e15f',
     bip44ChainId:2147484362,
@@ -157,7 +157,7 @@ const networks = {
   },
   OPT_mainnet:{
     url: "https://mainnet.optimism.io/",
-    chainId :0,
+    chainId :10,
     tokenManager:'0x1ed3538383bbfdb80343b18f85d6c5a5fb232fb6',
     groupApprove:'0x329f162550e3d5d9898a0aae05e21bfcd5f1cf83',
     bip44ChainId:2147484262,
