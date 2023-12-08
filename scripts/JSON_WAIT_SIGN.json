@@ -640,7 +640,7 @@
     "chainId": "324",
     "nonce": 0,
     "gasPrice": "250000000",
-    "gasLimit": "1000000",
+    "gasLimit": "2000000",
     "from": "0x4ced9c0ea79ee6181600777d5b6bade7f3d301bf",
     "to": "0x58b18FDE33F8FEd285c9c538a894Ca2d1a21DF81",
     "topic": "653_ZKETH_MATICETH_ETH_ZKETH_ETH"
