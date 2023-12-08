@@ -6,7 +6,11 @@ async function main() {
 
     const records = require('./JSON_WAIT_SIGN.json')
     let nonce = {}
-    for(let i=0; i<1; i++) {
+    let gasPrice = {}
+    const abi = require('../artifacts/contracts/tokenManager/TokenManagerDelegateV2.sol/TokenManagerDelegateV2.json').abi
+    let ifaTm = new ethers.utils.Interface( abi )
+    
+    for(let i=0; i<records.length; i++) {
         let record = records[i]
         let topic = record.topic
         console.log("topic:", topic)
@@ -26,7 +30,7 @@ async function main() {
         let httpProvider = new ethers.providers.JsonRpcProvider(cfgChain.url)
         await httpProvider.ready
         chainInfo = await httpProvider.getNetwork()
-        console.log("chainInfo:", chainInfo)
+        //console.log("chainInfo:", chainInfo)
         if(execChain != 'WAN') {
             assert.equal(record.chainId, chainInfo.chainId, 'online chainId failed')
         }
@@ -34,10 +38,44 @@ async function main() {
             nonce[execChain] += 1
         } else {
             nonce[execChain] = await httpProvider.getTransactionCount(record.from)
-            console.log("nonce[execChain]:", nonce[execChain])
         }
+        console.log("nonce[execChain]:", nonce[execChain])
         assert(record.nonce, nonce[execChain], 'nonce failed')
-    }
-}
 
+        assert.equal(record.gasLimit, "1000000", 'gasLimit failed')
+        if(!gasPrice[execChain]) {
+            gasPrice[execChain] = await httpProvider.getFeeData()
+        }        
+        console.log("gasPrice[execChain]:", gasPrice[execChain].gasPrice.toString())
+        assert.ok(gasPrice[execChain].gasPrice.gte(record.gasPrice, 'gas price failed'))
+
+        let inputData = ifaTm.decodeFunctionData('addTokenPair', record.params[2])
+        //console.log("ifaTm inputData:", inputData)
+        assert.equal(tokenPairId, inputData.id.toNumber(), 'tokenpairId failed')
+
+        let fromChainObj = networks[fromChain+'_mainnet']
+        assert.equal(fromChainObj.bip44ChainId, inputData.fromChainID.toNumber(), 'inputdata fromChainID failed')
+        let toChainObj = networks[toChain+'_mainnet']
+        assert.equal(toChainObj.bip44ChainId, inputData.toChainID.toNumber(), 'inputdata toChainObj failed')
+    
+        let fromTokenObj = fromChainObj.tokens[fromToken]
+        assert.equal(fromTokenObj.Address.toLowerCase(), inputData.fromAccount.toLowerCase(), 'inputdata fromAccount failed')
+        let toTokenObj = toChainObj.tokens[toToken]
+        assert.equal(toTokenObj.Address.toLowerCase(), inputData.toAccount.toLowerCase(), 'inputdata toAccount failed')
+    
+        assert.equal(fromTokenObj.Ancestor, toTokenObj.Ancestor, 'Ancestor failed')
+        let [ancestorChainName, ancestorTokenName] = fromTokenObj.Ancestor.split('_')
+        ancestorChainName = ancestorChainName + '_mainnet'
+        let ancestor = networks[ancestorChainName].tokens[ancestorTokenName]
+        assert.equal(ancestor.Symbol, inputData.aInfo.symbol, 'ancestor symbol failed')
+        assert.equal(ancestor.name, inputData.aInfo.Name, 'ancestor Name failed')
+        assert.equal(ancestor.decimals, inputData.aInfo.Decimals, 'ancestor Decimals failed')
+        assert.equal(ancestor.account, inputData.aInfo.Address, 'ancestor Address failed')
+        assert.equal(networks[ancestorChainName].bip44ChainId, inputData.aInfo.chainID.toNumber(), 'ancestor chainID failed')
+    }   
+
+}
+function findChainbyBip44ID(id) {
+
+}
 main()

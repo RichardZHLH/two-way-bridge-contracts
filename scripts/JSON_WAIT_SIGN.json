@@ -35,7 +35,7 @@
     "gasLimit": "1000000",
     "from": "0x0f4f833f031fff7e76aa783212f786432a14fb90",
     "to": "0xff72713c834a96f3c2f28145b4f05e5faf39e572",
-    "topic": "548_WAN_MATICETH_ETH_WAN_ETH"
+    "topic": "548_WAN_MATICETH_ETH_WAN_wanETH"
   },
   {
     "abi": {
@@ -73,7 +73,7 @@
     "gasLimit": "1000000",
     "from": "0x0f4f833f031fff7e76aa783212f786432a14fb90",
     "to": "0xff72713c834a96f3c2f28145b4f05e5faf39e572",
-    "topic": "add_tokenpair_on_wanchain_549_maticETH_ETH"
+    "topic": "549_WAN_MATICETH_ETH_ETH_ETH"
   },
   {
     "abi": {
@@ -111,7 +111,7 @@
     "gasLimit": "1000000",
     "from": "0x0f4f833f031fff7e76aa783212f786432a14fb90",
     "to": "0xff72713c834a96f3c2f28145b4f05e5faf39e572",
-    "topic": "add_tokenpair_on_wanchain_647_maticETH_ARB"
+    "topic": "647_WAN_MATICETH_ETH_ARB_ETH"
   },
   {
     "abi": {
@@ -149,7 +149,7 @@
     "gasLimit": "1000000",
     "from": "0x0f4f833f031fff7e76aa783212f786432a14fb90",
     "to": "0xff72713c834a96f3c2f28145b4f05e5faf39e572",
-    "topic": "add_tokenpair_on_wanchain_648_maticETH_BNB"
+    "topic": "648_WAN_MATICETH_ETH_BSC_ETH"
   },
   {
     "abi": {
@@ -187,7 +187,7 @@
     "gasLimit": "1000000",
     "from": "0x0f4f833f031fff7e76aa783212f786432a14fb90",
     "to": "0xff72713c834a96f3c2f28145b4f05e5faf39e572",
-    "topic": "add_tokenpair_on_wanchain_649_maticETH_OPT"
+    "topic": "649_WAN_MATICETH_ETH_OPT_ETH"
   },
   {
     "abi": {
@@ -225,7 +225,7 @@
     "gasLimit": "1000000",
     "from": "0x0f4f833f031fff7e76aa783212f786432a14fb90",
     "to": "0xff72713c834a96f3c2f28145b4f05e5faf39e572",
-    "topic": "add_tokenpair_on_wanchain_650_maticETH_MATIC"
+    "topic": "650_WAN_MATICETH_ETH_MATIC_ETH"
   },
   {
     "abi": {
@@ -263,7 +263,7 @@
     "gasLimit": "1000000",
     "from": "0x0f4f833f031fff7e76aa783212f786432a14fb90",
     "to": "0xff72713c834a96f3c2f28145b4f05e5faf39e572",
-    "topic": "add_tokenpair_on_wanchain_651_maticETH_Base"
+    "topic": "651_WAN_MATICETH_ETH_BASE_ETH"
   },
   {
     "abi": {
@@ -301,7 +301,7 @@
     "gasLimit": "1000000",
     "from": "0x0f4f833f031fff7e76aa783212f786432a14fb90",
     "to": "0xff72713c834a96f3c2f28145b4f05e5faf39e572",
-    "topic": "add_tokenpair_on_wanchain_652_maticETH_Linea"
+    "topic": "652_WAN_MATICETH_ETH_LINEA_ETH"
   },
   {
     "abi": {
@@ -339,7 +339,7 @@
     "gasLimit": "1000000",
     "from": "0x0f4f833f031fff7e76aa783212f786432a14fb90",
     "to": "0xff72713c834a96f3c2f28145b4f05e5faf39e572",
-    "topic": "add_tokenpair_on_wanchain_653_maticETH_ZKSYNC"
+    "topic": "653_WAN_MATICETH_ETH_ZKETH_ETH"
   },
   {
     "abi": {
@@ -377,7 +377,7 @@
     "gasLimit": "1000000",
     "from": "0x4ced9c0ea79ee6181600777d5b6bade7f3d301bf",
     "to": "0xa1223a59a55eaad135bce9f513181c388072cc71",
-    "topic": "add_tokenpair_on_ethereum_549_maticETH_ETH"
+    "topic": "549_ETH_MATICETH_ETH_ETH_ETH"
   },
   {
     "abi": {
@@ -415,7 +415,7 @@
     "gasLimit": "1000000",
     "from": "0x4ced9c0ea79ee6181600777d5b6bade7f3d301bf",
     "to": "0x8d42d317b2bd6b60183461ed41bd00f17c3f3fe8",
-    "topic": "add_tokenpair_on_arb_647_maticETH_ARB"
+    "topic": "647_ARB_MATICETH_ETH_ARB_ETH"
   },
   {
     "abi": {
@@ -453,7 +453,7 @@
     "gasLimit": "1000000",
     "from": "0x4ced9c0ea79ee6181600777d5b6bade7f3d301bf",
     "to": "0x5a809f774a2f9fb2587aeca7e380e3d67522e15f",
-    "topic": "add_tokenpair_on_bsc_648_maticETH_BSC"
+    "topic": "648_BSC_MATICETH_ETH_BSC_ETH"
   },
   {
     "abi": {
@@ -491,7 +491,7 @@
     "gasLimit": "1000000",
     "from": "0x4ced9c0ea79ee6181600777d5b6bade7f3d301bf",
     "to": "0x329f162550e3d5d9898a0aae05e21bfcd5f1cf83",
-    "topic": "add_tokenpair_on_opt_649_maticETH_OPT"
+    "topic": "649_OPT_MATICETH_ETH_OPT_ETH"
   },
   {
     "abi": {
@@ -529,7 +529,7 @@
     "gasLimit": "1000000",
     "from": "0x4ced9c0ea79ee6181600777d5b6bade7f3d301bf",
     "to": "0x329f162550e3d5d9898a0aae05e21bfcd5f1cf83",
-    "topic": "add_tokenpair_on_matic_650_maticETH_MATIC"
+    "topic": "650_MATIC_MATICETH_ETH_MATIC_ETH"
   },
   {
     "abi": {
@@ -567,7 +567,45 @@
     "gasLimit": "1000000",
     "from": "0x4ced9c0ea79ee6181600777d5b6bade7f3d301bf",
     "to": "0xd97de67b982d79ED9f7EB2b1A13abC704b2cA082",
-    "topic": "add_tokenpair_on_base_651_maticETH_BASE"
+    "topic": "651_BASE_MATICETH_ETH_BASE_ETH"
+  },
+  {
+    "abi": {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_chainId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "proposal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "params": [
+      "1073741841",
+      "0x09cDfc56439643d151585B77899d0dC0f982BcD2",
+      "0x4f600ae8000000000000000000000000000000000000000000000000000000000000028b00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000004000000e00000000000000000000000000000000000000000000000000000000000002200000000000000000000000000000000000000000000000000000000040000011000000000000000000000000000000000000000000000000000000000000026000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000001200000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000008000003c000000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008657468657265756d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000345544800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "chain": "BASE",
+    "chainId": "8453",
+    "nonce": 1,
+    "gasPrice": "1000050",
+    "gasLimit": "1000000",
+    "from": "0x4ced9c0ea79ee6181600777d5b6bade7f3d301bf",
+    "to": "0xd97de67b982d79ED9f7EB2b1A13abC704b2cA082",
+    "topic": "652_LINEA_MATICETH_ETH_LINEA_ETH"
   },
   {
     "abi": {
@@ -605,6 +643,6 @@
     "gasLimit": "1000000",
     "from": "0x4ced9c0ea79ee6181600777d5b6bade7f3d301bf",
     "to": "0x58b18FDE33F8FEd285c9c538a894Ca2d1a21DF81",
-    "topic": "add_tokenpair_on_zksync_653_maticETH_ZKETH"
+    "topic": "653_ZKETH_MATICETH_ETH_ZKETH_ETH"
   }
 ]

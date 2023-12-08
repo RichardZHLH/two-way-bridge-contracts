@@ -15,7 +15,7 @@ const networks = {
         Symbol: 'wanETH',
         Name: 'wanETH@wanchain',
         Decimals: 18,
-        Address:"0x48344649b9611a891987b2db33faada3ac1d05ec",
+        Address:"0x74e121a34a66d54c33f3291f2cdf26b1cd037c3a",
       },
     }
   },
@@ -100,7 +100,7 @@ const networks = {
         Symbol: 'ETH',
         Name: 'ethereum',
         Decimals: 18,
-        Address:"0x0000000000000000000000000000000000000000",
+        Address:"0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
       },
     }
   },
@@ -151,7 +151,7 @@ const networks = {
         Symbol: 'ETH',
         Name: 'ethereum',
         Decimals: 18,
-        Address:"0x0000000000000000000000000000000000000000",
+        Address:"0x2170ed0880ac9a755fd29b2688956bd959f933f8",
       },
     }
   },
