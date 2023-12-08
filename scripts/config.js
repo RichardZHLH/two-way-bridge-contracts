@@ -15,7 +15,7 @@ const networks = {
         Symbol: 'wanETH',
         Name: 'wanETH@wanchain',
         Decimals: 18,
-        Address:"0x74e121a34a66d54c33f3291f2cdf26b1cd037c3a",
+        Address:"0xe3ae74d1518a76715ab4c7bedf1af73893cd435a",
       },
     }
   },
