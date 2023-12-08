@@ -72,7 +72,7 @@ const networks = {
   },
   LINEA_mainnet:{
     url: "https://1rpc.io/linea",
-    chainId :8453,
+    chainId :59144,
     tokenManager:'0x97E0883493e8bB7A119A1E36E53ee9E7A2D3CA7b',
     groupApprove:'0x3cc97934F6770b649ef27682c6b9369b073c1058',
     bip44ChainId:1073741842,
@@ -139,7 +139,7 @@ const networks = {
     }
   },
   BSC_mainnet:{
-    url: "https://bsc.blockpi.network/v1/rpc/public",
+    url: "https://bsc-dataseed1.defibit.io",
     chainId :56,
     tokenManager:'0x39af91cba3aed00e9b356ecc3675c7ef309017dd',
     groupApprove:'0x5a809f774a2f9fb2587aeca7e380e3d67522e15f',

@@ -34,20 +34,30 @@ async function main() {
         if(execChain != 'WAN') {
             assert.equal(record.chainId, chainInfo.chainId, 'online chainId failed')
         }
-        if(nonce[execChain]) {
+        if(nonce[execChain] != undefined) {
             nonce[execChain] += 1
         } else {
             nonce[execChain] = await httpProvider.getTransactionCount(record.from)
         }
-        console.log("nonce[execChain]:", nonce[execChain])
-        assert(record.nonce, nonce[execChain], 'nonce failed')
+        console.log("nonce[execChain]:", nonce[execChain], record.nonce)
+        assert.equal(nonce[execChain], record.nonce,    'nonce failed')
 
-        assert.equal(record.gasLimit, "1000000", 'gasLimit failed')
+        if(execChain == 'ARB') {
+            assert.equal(record.gasLimit, "2000000", 'gasLimit failed')
+        } else {
+            assert.equal(record.gasLimit, "1000000", 'gasLimit failed')
+        }
         if(!gasPrice[execChain]) {
             gasPrice[execChain] = await httpProvider.getFeeData()
         }        
-        console.log("gasPrice[execChain]:", gasPrice[execChain].gasPrice.toString())
-        assert.ok(gasPrice[execChain].gasPrice.gte(record.gasPrice, 'gas price failed'))
+        console.log("gasPrice[execChain]:", gasPrice[execChain].gasPrice.toString(), record.gasPrice)
+
+        if(execChain == 'WAN') {
+            assert.equal(record.gasPrice, '2000000000', 'WAN gas price failed')
+        }else{
+            assert.ok(gasPrice[execChain].gasPrice.lte(record.gasPrice), 'gas price failed')
+
+        }
 
         let inputData = ifaTm.decodeFunctionData('addTokenPair', record.params[2])
         //console.log("ifaTm inputData:", inputData)
